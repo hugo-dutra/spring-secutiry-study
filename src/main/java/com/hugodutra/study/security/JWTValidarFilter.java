@@ -26,7 +26,6 @@ public class JWTValidarFilter extends BasicAuthenticationFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-
         String atributo = request.getHeader(HEADER_ATRIBUTO);
         if(atributo==null){
             chain.doFilter(request,response);
